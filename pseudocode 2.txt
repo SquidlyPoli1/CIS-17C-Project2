@@ -1,0 +1,11 @@
+The way the computer works now:
+- While there is no real "match" and the deck size is bigger than 1:
+  - Select a random rank
+  - Set both pair indexes to invalid
+  - Go through the entire deck and look for pairs:
+    - If there is no first index and the the test card has the same rank as the random, set the first index to the test index
+    - If there is a first index and the test index is not equal to the first index, test for second
+       - If there is no second index and the second test card has the same rank as the first, set the second index to the test index
+  - If the IDs of both cards match, set the true value to 1
+  - If they do not match, reset and repeat
+- If the match is true, return the cards to the master deck
